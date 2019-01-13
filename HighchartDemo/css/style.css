@@ -16,8 +16,9 @@ body {
 	right: 0;
 	left: 0;
 	top: 1%;
-	opacity: 0.5;
+	opacity: 0.7;
 	z-index: 1;
+	display: none;
 }
 
 .carousel .carousel-caption-text {
@@ -63,27 +64,24 @@ body {
 	margin-top: 2%;
 }
 
-.loaderCall{
+/* Center the loader */
+#loader {
 	position: absolute;
-	background: gray;
-	opacity: 0.4;
-}
-
-.loader {
-	position: absolute;
-	margin: auto;
-	top: 50% - 60px;
-	z-index: 10;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
 	border: 16px solid #f3f3f3;
 	border-radius: 50%;
 	border-top: 16px solid #3498db;
 	width: 120px;
 	height: 120px;
-	-webkit-animation: spin 2s linear infinite; /* Safari */
+	-webkit-animation: spin 2s linear infinite;
 	animation: spin 2s linear infinite;
   }
   
-  /* Safari */
   @-webkit-keyframes spin {
 	0% { -webkit-transform: rotate(0deg); }
 	100% { -webkit-transform: rotate(360deg); }
@@ -92,4 +90,23 @@ body {
   @keyframes spin {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+	position: relative;
+	-webkit-animation-name: animatebottom;
+	-webkit-animation-duration: 1s;
+	animation-name: animatebottom;
+	animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+	from { bottom:-100px; opacity:0 } 
+	to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+	from{ bottom:-100px; opacity:0 } 
+	to{ bottom:0; opacity:1 }
   }

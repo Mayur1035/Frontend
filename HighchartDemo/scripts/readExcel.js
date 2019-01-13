@@ -1,13 +1,9 @@
 $(function () {
     $("#result").hide();
-    $("#loaderCall").hide();
     $("#inputGroupFile02").on("change", function () {
+        $("#loaderCall").show();
         var excelFile,
             fileReader = new FileReader();
-
-        $("#query").hide();
-        $("#loaderCall").show();
-
         fileReader.onload = function (e) {
             var buffer = new Uint8Array(fileReader.result);
 
@@ -66,7 +62,8 @@ $(function () {
 });
 
 function createCharts(data) {
-   // $("#loaderCall").hide();
+    $("#query").hide();
+    $("#loaderCall").hide();
     $("#result").show();
 
     var categoryArray = [];
