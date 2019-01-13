@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Analytics | Equifax</title>
+    <!-- CSS starts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS ends -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark nav-background-new">
+            <a class="navbar-brand nav-logo-setting" href="#">
+                <img src="https://assets.equifax.com/global/images/logos/logo_white_123x24.png" class="d-inline-block align-top img-fluid"
+                    alt="EquiFax Business">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">ANALYTICS
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BUSINESS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PERSONAL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FORMS</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="container-fluid chart-content">
+        <div id="query">
+            <div class="jumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">This is a simple demo of our analytics, a simple example of our data processing capabilities to display content
+                    or information in pictorial representation.</p>
+                <hr class="my-4">
+                <p>It uses external excel files as data source to display the information in form of graphs or charts.</p>
+
+                <div class="input-group mb-3">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile02" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                        />
+                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file with extension .xlsx or .xls only</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg justify-content-center">
+                    <div class="card justify-content-center card-border-none">
+                        <h3>Global Lineage</h3>
+                        <div class="card-body">
+                            <p class="card-text text-justify">A global leader in information solutions with a presence in 17 countries. Headquartered in USA,
+                                Equifax, Inc. has a strong heritage of innovation and leadership in advanced analytics and
+                                uses proprietary technology to enrich the performance of businesses and the lives of consumers.
+                                <a href="#">Read More...</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg justify-content-center">
+                    <div class="card justify-content-center card-border-none">
+                        <h3>What we do</h3>
+                        <div class="card-body">
+                            <p class="card-text text-justify">Empower business and consumers with information they can trust Equifax helps you leverage relevant
+                                and actionable consumer information that provides unprecedented insights.
+                                <a href="#">Read More...</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loaderCall">
+                <div class="loader"></div>
+        </div>
+        
+        <div id="result">
+            <div class="row">
+                <div class="col-lg justify-content-center">
+                    <div class="card justify-content-center card-border-none">
+                        <div id="chart1_container" style="width:100%; height:400px;"></div>
+                        <div class="card-body">
+                            <p class="card-text text-justify">This bar graph is displaying different type of contracts which are opted by customers. Also it's
+                                displaying number of contracts based on gender and type.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg justify-content-center">
+                    <div class="card justify-content-center card-border-none">
+                        <div id="chart2_container" style="width:100%; height:400px;"></div>
+                        <div class="card-body">
+                            <p class="card-text text-justify">This bar graph is displaying different type of internet services which are choosen by customers.
+                                Also it's displaying count of services based on gender and type.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg justify-content-center">
+                    <div class="card justify-content-center card-border-none">
+                        <div id="chart3_container" style="width:100%; height:400px;"></div>
+                        <div class="card-body">
+                            <p class="card-text text-justify">This pie chart is displaying different type of form of payments which are used by customers.
+                                Also it's displaying the share percentage of each form of payment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg justify-content-center">
+                    <div class="card justify-content-center card-border-none">
+                        <div id="chart4_container" style="width:100%; height:400px;"></div>
+                        <div class="card-body">
+                            <p class="card-text text-justify">This scatter graph is displaying information about total charges and monthly charges paid by
+                                each customers. Also it's displaying charges paid based on gender.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <nav class="navbar bg-faded nav-background-new">
+            <a class="navbar-brand footer-nav-setting" href="#"> Copyright
+                <i class="far fa-copyright"></i> 2019
+            </a>
+            <div class="d-flex justify-content-end">
+                <a class="navbar-brand footer-nav-setting" href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="navbar-brand footer-nav-setting" href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </nav>
+    </footer>
+
+</body>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/infragistics.core.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/infragistics.lob.js"></script>
+
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.ext_core.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.ext_collections.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.ext_text.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.ext_io.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.ext_ui.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.documents.core_core.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.ext_collectionsextended.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.excel_core.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.ext_threading.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.ext_web.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.xml.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.documents.core_openxml.js"></script>
+<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/2018.2/latest/js/modules/infragistics.excel_serialization_openxml.js"></script>
+<script src="scripts/readExcel.js"></script>
+
+</html>
