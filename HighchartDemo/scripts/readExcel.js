@@ -124,6 +124,7 @@ function createCharts(data) {
             + fcontractArrayCnt[fcontractArray[i]]) / 2;
     }
 
+    // Displaying Contract Type Informations
     Highcharts.chart('chart1_container', {
         title: {
             text: 'Contract Type Informations'
@@ -162,7 +163,7 @@ function createCharts(data) {
     });
 
 
-
+    // Displaying Service Type Informations
     Highcharts.chart('chart2_container', {
         chart: {
             type: 'bar'
@@ -189,7 +190,7 @@ function createCharts(data) {
             }]
     });
 
-    // Radialize the colors
+    // Displaying Form of Payments Used
     Highcharts.setOptions({
         colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
             return {
@@ -246,7 +247,7 @@ function createCharts(data) {
     });
 
 
-
+    //Displaying Total and Monthly Charges
     Highcharts.chart('chart4_container', {
         chart: {
             type: 'scatter',
